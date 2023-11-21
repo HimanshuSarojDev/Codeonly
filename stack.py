@@ -25,7 +25,11 @@ class stack:
             return print(self.list[len(self.list)-1])
     
     def print_stack(self):
-        print("Stack:", self.list)
+        if self.isEmpty():
+            print("Stack is empty")
+        else:
+            for item in reversed(self.list):
+                print(f"| {item} |")
         
     def delete(self):
         self.list = None
@@ -38,4 +42,5 @@ custom.push(30)
 custom.push(50)
 custom.push(10)
 custom.print_stack()
-
+custom.pop()
+custom.peek()
